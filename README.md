@@ -19,7 +19,7 @@ git clone https://github.com/mthaiminhvip2/Scoring_exercise.git
 chạy chương trình
 
 ```bash
-python Minh_Thai_grade_the_exams.py
+python minh_thai_grade_the_exams.py
 ```
 
 ## Sử dụng
