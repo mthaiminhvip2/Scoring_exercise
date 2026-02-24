@@ -1,48 +1,34 @@
-Dự án: Hệ thống Chấm điểm Thi Tự động (Grade the Exams)
+# Test Grade Calculator
 
-📌 Giới thiệu:  Dự án này là một chương trình Python giúp tự động hóa quy trình chấm điểm các bài thi trắc nghiệm từ các tệp văn bản (.txt). Chương trình sử dụng thư viện Pandas và NumPy để xử lý dữ liệu lớn một cách tối ưu và nhanh chóng.
+## Cài đặt môi trường
 
-🚀 Các Tính năng Chính: Chương trình được chia thành 4 nhiệm vụ chính (Tasks):
-Kiểm tra tệp đầu vào (Task 1):  Yêu cầu người dùng nhập tên lớp và kiểm tra sự tồn tại của tệp bằng xử lý ngoại lệ (try/except).
+Đảm bảo thiết bị của bạn đã cài đặt Python 3.x. Cài đặt các thư viện cần thiết thông qua `pip`:
 
-Phân tích & Lọc dữ liệu (Task 2): * Kiểm tra định dạng mã số sinh viên (bắt đầu bằng 'N' và có 8 chữ số).Đảm bảo mỗi dòng dữ liệu có đủ 26 giá trị (1 ID + 25 câu trả lời).Báo cáo chi tiết các dòng dữ liệu không hợp lệ.
+```bash
+pip install pandas numpy
+```
 
-Chấm điểm & Thống kê (Task 3):Áp dụng quy tắc: Đúng (+4), Bỏ qua (0), Sai (-1).Sử dụng kỹ thuật Vectorization của NumPy để tính toán điểm số cho toàn bộ lớp cùng lúc.Tính toán các chỉ số thống kê: Điểm trung bình, Cao nhất, Thấp nhất, Miền giá trị và Trung vị (Median).
+## Cài đặt và chạy ứng dụng
 
-Xuất kết quả (Task 4): Lưu kết quả điểm số của từng sinh viên vào một tệp mới có hậu tố _grades.txt.
+Clone repo về máy và di chuyển vào thư mục dự án:
 
-🛠 Yêu cầu Hệ thống
-    Python 3.x
-    Thư viện Pandas
-    Thư viện NumPy
-Cài đặt nhanh các thư viện cần thiết:pip install pandas numpy
+```bash
+git clone https://github.com/mthaiminhvip2/Scoring_exercise.git
+```
 
-📂 Cấu trúc Dự ánPlaintext.
-├── class1.txt                  # Dữ liệu mẫu lớp 1
-├── class2.txt                  # Dữ liệu mẫu lớp 2
-├── class3.txt                  # Dữ liệu mẫu lớp 3
-├── class4.txt                  # Dữ liệu mẫu lớp 4
-├── class5.txt                  # Dữ liệu mẫu lớp 5
-├── class6.txt                  # Dữ liệu mẫu lớp 6
-├── class7.txt                  # Dữ liệu mẫu lớp 7
-├── class8.txt                  # Dữ liệu mẫu lớp 8
-├── lastname_firstname_grade_the_exams.py   # File mã nguồn chính
-└── README.md                               # Hướng dẫn dự án
+chạy chương trình
 
-📖 Hướng dẫn Sử dụng
-    1.Đặt file mã nguồn .py và các file dữ liệu .txt vào cùng một thư mục.
-    2.Chạy chương trình bằng lệnh:python lastname_firstname_grade_the_exams.py
-    3.Nhập tên lớp khi được yêu cầu (ví dụ: class1).
-    4.Xem báo cáo phân tích trên màn hình và kiểm tra file kết quả class1_grades.txt được tạo ra trong thư mục.
+```bash
+python Minh_Thai_grade_the_exams.py
+```
 
-📊 Quy tắc Chấm điểm
-    Chương trình sử dụng bộ đáp án chuẩn:B,A,D,D,C,B,D,A,C,C,D,B,A,B,A,C,B,D,A,C,A,A,B,D,D
-    Loại câu trả lời
-        Điểm:
-            Đúng+4
-            Sai-1
-            Bỏ trống0
-            
-📝 Thông tin Sinh viên
-Họ và tên: Trần Thái Minh
-Mã số sinh viên: 202416568
+## Sử dụng
+
+Khi chương trình khởi chạy, nhập tên file dữ liệu bạn muốn chấm điểm (ví dụ: class1 hoặc class2) tại dấu nhắc lệnh:
+
+```bash
+Enter a class to grade (i.e. class1 for class1.txt): class1
+```
+
+Nếu tên file không tồn tại, thông báo "File cannot be found." sẽ hiện ra và chương trình sẽ yêu cầu bạn tiến hành nhập lại tên file.
+
