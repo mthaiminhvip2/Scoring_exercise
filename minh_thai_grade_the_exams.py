@@ -40,9 +40,8 @@ def task_1():
         except Exception as e:
             # Xử lý các lỗi phát sinh khác (nếu có) một cách chung chung
             print(f"An error occurred: {e}")
-
-if __name__ == "__main__":
-    current_file = task_1()
+            
+current_file = task_1()
 
 def task_2(full_filename):
     print("\n**** ANALYZING ****")
@@ -99,12 +98,6 @@ def task_2(full_filename):
         print(f"Error during analysis: {e}")
         return None
 
-# Cách gọi trong khối main
-if __name__ == "__main__":
-    # Giả sử current_file lấy từ Task 1
-    current_file = task_1()
-    valid_data = task_2(current_file)
-
 valid_data_series = task_2(current_file)
 def task_3(valid_data_series):
     """
@@ -151,11 +144,6 @@ def task_3(valid_data_series):
 
     return scores, data_matrix[:, 0] # Trả về điểm và ID để dùng cho Task 4
 
-if __name__ == "__main__":
-    scores, student_ids = task_3(valid_data_series)
-
-# 1. Chuẩn bị dữ liệu từ các Task trước
-original_filename = current_file
 scores, student_ids = task_3(valid_data_series)
 
 # 2. Định nghĩa "cách làm" Task 4 (giữ nguyên code của bạn)
@@ -174,4 +162,4 @@ def task_4(original_filename, student_ids, scores):
     print(f"Results saved to {output_filename}")
 
 # 3. QUAN TRỌNG NHẤT: Đây là lệnh để Python THỰC HIỆN việc tạo file
-task_4(original_filename, student_ids, scores)
+task_4(current_file, student_ids, scores)
